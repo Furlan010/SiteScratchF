@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>INFOTEC — Vitrine de Jogos Scratch da Etec</title>
+<meta name="description" content="INFOTEC: vitrine moderna e interativa dos jogos criados no Scratch pelos alunos do curso de Informática para Internet da Etec." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body class="theme-light">
+
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="cursor-glow" id="cursorGlow"></div>
+<div class="bg-grid"></div>
+<div class="bg-blobs">
+  <span class="blob b1"></span>
+  <span class="blob b2"></span>
+  <span class="blob b3"></span>
+</div>
+
+<!-- NAVBAR -->
+<header class="nav">
+  <a href="#top" class="nav__logo">
+    <span class="logo-mark">&lt;/&gt;</span>
+    <span class="logo-text">INFO<span>TEC</span></span>
+  </a>
+  <nav class="nav__links">
+    <a href="#top">Início</a>
+    <a href="#destaque">Destaque</a>
+    <a href="#jogos">Jogos</a>
+    <a href="#contato">Contato</a>
+  </nav>
+  <div class="nav__right">
+    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+    <button class="nav__cta" data-scroll="#jogos">
+      <span>Jogar agora</span> <i class="fa-solid fa-arrow-right"></i>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__copy">
+      <div class="hero__tag"><span class="dot"></span> Projetos dos alunos · Informática para Internet</div>
+      <h1 class="hero__title">
+        Onde o <em class="grad">código</em><br/>
+        vira <span class="grad-2">diversão</span>.
+      </h1>
+      <p class="hero__sub">
+        Uma vitrine moderna, animada e interativa dos jogos criados no Scratch
+        pelas turmas de INFOTEC — com destaque especial para o projeto
+        <b>Makey Makey · Guitar Hero</b>.
+      </p>
+      <div class="hero__actions">
+        <button class="btn btn--primary btn--lg" data-scroll="#jogos">
+          Ver jogos <i class="fa-solid fa-gamepad"></i>
+        </button>
+        <button class="btn btn--ghost btn--lg" data-scroll="#destaque">
+          Jogo em destaque
+        </button>
+      </div>
+      <div class="hero__stats">
+        <div><strong data-count="15">0</strong><span>Jogos</span></div>
+        <div><strong data-count="3">0</strong><span>Turmas</span></div>
+        <div><strong data-count="100">0</strong><span>% Alunos</span></div>
+      </div>
+    </div>
+
+    <div class="hero__art">
+      <div class="scene">
+        <div class="scene__ring r2"></div>
+        <div class="scene__ring"></div>
+        <div class="scene__disc"></div>
+        <img class="scene__cat" src="https://kallebrafael.github.io/SiteScratchFETEC/assets/scratch-cat.png" alt="Mascote Scratch" />
+        <div class="float-card fc1"><i class="fa-solid fa-bolt"></i> 15 projetos ao vivo</div>
+        <div class="float-card fc2"><i class="fa-solid fa-code"></i> Feito por alunos</div>
+        <div class="float-card fc3"><i class="fa-solid fa-gamepad"></i> Jogue no navegador</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESTAQUE -->
+  <section class="featured" id="destaque">
+    <div class="featured__badge"><i class="fa-solid fa-star"></i> Jogo em destaque</div>
+    <div class="featured__grid">
+      <div class="featured__copy reveal">
+        <h2>Guitar Hero <span class="chip">Makey Makey</span></h2>
+        <p>
+          O Projeto Makey Makey é um jogo criado no Scratch baseado no <b>Guitar Hero</b>,
+          desenvolvido pelos alunos <b>Caio Henrique</b> e <b>Livia Cardia</b> do 3º ano de Informática.
+          Existem duas formas de jogar:
+        </p>
+
+        <div class="opts">
+          <div class="opt">
+            <span class="opt__num">01</span>
+            <div>
+              <h4>Placa Makey Makey</h4>
+              <p>Use Placa Makey Makey, cabo USB, cabos jacaré e massinha de modelar.</p>
+            </div>
+          </div>
+          <div class="opt">
+            <span class="opt__num">02</span>
+            <div>
+              <h4>Usando as setas</h4>
+              <ul class="keys">
+                <li><kbd>↑</kbd> <span class="sw red"></span> Vermelho</li>
+                <li><kbd>↓</kbd> <span class="sw yellow"></span> Amarelo</li>
+                <li><kbd>→</kbd> <span class="sw blue"></span> Azul</li>
+                <li><kbd>←</kbd> <span class="sw green"></span> Verde</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn--primary btn--lg" data-play="guitar">
+          Jogar agora <i class="fa-solid fa-play"></i>
+        </button>
+      </div>
+
+      <div class="featured__art reveal">
+        <div class="art-frame" id="featuredArt">
+          <span class="art-frame__badge">Makey Makey</span>
+          <img src="https://tavernf.github.io/scratchFetec/Guitar%20hero.png" alt="Guitar Hero — projeto Makey Makey" />
+          <div class="art-frame__pulse"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE / SECTION HEAD -->
+  <div class="section-head" id="sobre">
+    <span class="kicker">Scratch · Vitrine</span>
+    <h2 class="section-title">Jogos dos <em>alunos</em></h2>
+    <p class="section-sub">
+      Aqui estão os 15 jogos produzidos pelos alunos do 1º Ano de Informática para Internet.
+      Filtre por categoria, busque pelo nome ou deixe a sorte escolher.
+    </p>
+  </div>
+
+  <!-- TOOLBAR -->
+  <div class="toolbar">
+    <div class="search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input id="searchInput" type="text" placeholder="Buscar jogo pelo nome…" />
+    </div>
+    <div class="filters" id="filters"></div>
+    <button class="shuffle-btn" id="shuffleBtn"><i class="fa-solid fa-shuffle"></i> Surpreenda-me</button>
+  </div>
+
+  <!-- JOGOS -->
+  <section class="games" id="jogos">
+    <div class="games__grid" id="gamesGrid"></div>
+  </section>
+
+</main>
+
+<!-- MODAL JOGAR -->
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal__box" role="dialog" aria-modal="true">
+    <div class="modal__head">
+      <div class="modal__title">
+        <small id="modalCat">Scratch</small>
+        <span id="modalTitle">Jogo</span>
+      </div>
+      <button class="modal__close" id="modalClose" aria-label="Fechar"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="modal__body">
+      <iframe id="modalFrame" src="about:blank" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    </div>
+    <div class="modal__foot">
+      <span>Pressione <kbd>Esc</kbd> para sair · use as setas e o mouse para jogar.</span>
+      <a id="modalOpen" href="#" target="_blank" rel="noopener">Abrir no Scratch <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer" id="contato">
+  <div class="footer__grid">
+    <div class="footer__brand">
+      <a href="#top" class="nav__logo">
+        <span class="logo-mark">&lt;/&gt;</span>
+        <span class="logo-text">INFO<span>TEC</span></span>
+      </a>
+      <p>Projetos desenvolvidos pelas turmas <b>1º, 2º e 3º anos</b> do curso de <b>Informática para Internet</b> da Etec.</p>
+    </div>
+    <div class="footer__col">
+      <h5>Navegação</h5>
+      <a href="#top">Início</a>
+      <a href="#destaque">Destaque</a>
+      <a href="#jogos">Jogos</a>
+    </div>
+    <div class="footer__col">
+      <h5>Etec</h5>
+      <a href="https://etecdpm.cps.sp.gov.br" target="_blank" rel="noopener">etecdpm.cps.sp.gov.br <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      <a href="https://scratch.mit.edu" target="_blank" rel="noopener">scratch.mit.edu <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    </div>
+    <div class="footer__col">
+      <h5>Redes</h5>
+      <div class="socials">
+<a href="https://www.instagram.com/etecdarcypereira/" target="_blank" rel="noopener" aria-label="Instagram">
+  <i class="fa-brands fa-instagram"></i>
+</a>
+<a href="https://www.facebook.com/etecdpmitapetininga/?locale=pt_BR" target="_blank" rel="noopener" aria-label="Facebook">
+  <i class="fa-brands fa-facebook-f"></i>
+</a>
+        <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© <span id="year"></span> INFOTEC — Todos os direitos reservados.</span>
+    <span>Feito com <i class="fa-solid fa-heart"></i> pelo aluno Gustavo Furlan de Informática para Internet.</span>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
