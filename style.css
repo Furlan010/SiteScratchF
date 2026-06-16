@@ -685,3 +685,90 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   .footer__grid{grid-template-columns:1fr}
   .footer__bottom{flex-direction:column;text-align:center}
 }
+/* Notebook */
+@media (max-width: 1200px) {
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    h1 {
+        font-size: 42px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .container {
+        width: 95%;
+    }
+}
+
+/* Celular */
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+    }
+}
+
+/* Celular pequeno */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 40px 15px;
+    }
+}
